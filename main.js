@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			selectedRatingSpan.textContent = selectedRating;
 			// Hide the rating state and show the thank you state
 			ratingState.classList.add('hidden');
-			thankYouState.classList.remove('hidden');
 			thankYouState.style.display = "grid"
 		} else {
 			alert('Please select a rating before submitting.');
