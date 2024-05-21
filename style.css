@@ -1,0 +1,205 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+* {
+	margin: 0;
+}
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	font-size: 18px; /* font size as per style guide */
+	display: grid;
+	place-content: center;
+	font-family: "Overpass";
+	min-height: 100vh;
+	background-color: var(--Very-Dark-Blue);
+}
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+#root,
+#__next {
+	isolation: isolate;
+}
+
+/* Variables */
+
+:root {
+	--Orange: hsl(25, 97%, 53%);
+	--White: hsl(0, 0%, 100%);
+	--Light-Grey: hsl(217, 12%, 63%);
+	--Light-Grey-hsl: 217, 12%, 63%;
+	--Dark-Blue: hsl(213, 19%, 18%);
+	--Very-Dark-Blue: hsl(216, 12%, 8%);
+	--Very-Dark-Blue-hsl: hsla(217, 20%, 17%, 0.5);
+}
+
+@font-face {
+	font-family: "Overpass";
+	src: url(./Overpass/Overpass-VariableFont_wght.ttf)format("truetype");
+	font-weight: 400 700;
+}
+
+.container {
+	display: grid;
+	gap: 1rem;
+	max-width: 20rem;
+	background: linear-gradient(var(--Dark-Blue) 10%, var(--Very-Dark-Blue-hsl) 90%);
+	color: var(--White);
+	border-radius: 1rem;
+	padding: 1.75rem;
+}
+
+.container img {
+	background-color: hsl(216, 12%, 22%);
+	border-radius: 50%;
+	padding: 0.75rem;
+}
+
+.container h1 {
+	font-size: 1.5rem;
+}
+
+.review-section p {
+	font-size: .75rem;
+	color: var(--Light-Grey);
+}
+
+.rating-container {
+	display: flex;
+	width: 100%;
+	justify-content: start;
+	gap: 1rem;
+}
+
+.rank {
+	background-color: hsl(216, 12%, 22%);
+	height: 2.5rem;
+	width: 2.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	font-size: 0.85rem;
+	color: var(--Light-Grey);
+	cursor: pointer;
+	border: none;
+}
+
+
+button {
+	border-radius: 100vw;
+	border: none;
+	font-family: "Overpass";
+	text-transform: uppercase;
+	font-size: .75rem;
+	font-weight: 700;
+	padding: 0.5rem;
+	cursor: pointer;
+	background-color: var(--Orange);
+}
+
+button:hover {
+	background-color: var(--White);
+}
+
+.rank:hover {
+	background-color: var(--Orange);
+	color: black;
+}
+
+.rank:focus,
+.rank:active {
+	background-color: var(--White); /* Change background to white on focus and active */
+	color: black; /* Change text color to ensure visibility */
+	outline: none; /* Remove default focus outline */
+}
+
+.thank-you-container {
+	display: grid;
+	place-items: center;
+	gap: 1.75rem;
+	max-width: 22rem;
+	background: linear-gradient(var(--Dark-Blue) 10%, var(--Very-Dark-Blue-hsl) 90%);
+	color: var(--White);
+	border-radius: 1rem;
+	padding: 1.75rem;
+}
+
+.thank-you-container img {
+	height: 6rem;
+	width: 9rem;
+}
+
+.selection {
+	font-weight: 400;
+	font-size: .75rem;
+	background-color: hsl(216, 12%, 22%);
+	border-radius: 100vw;
+	line-height: 1.75rem;
+	padding: 0 1rem;
+	color: var(--Orange);
+}
+
+.reply {
+	text-align: center;
+}
+
+.reply h1 {
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.reply p {
+	font-size: 0.95rem;
+	color: var(--Light-Grey);
+}
+
+.hidden {
+	display: none;
+}
+
+@media (max-width: 600px) {
+	.thank-you-container {
+		margin-inline: .7rem;
+	}
+
+	.container {
+		margin-inline: .5rem;
+	}
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}

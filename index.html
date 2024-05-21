@@ -1,45 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
 
-  <title>Frontend Mentor | Interactive rating component</title>
-  <link rel="stylesheet" href="style.css">
+		<title>Frontend Mentor | Interactive rating component</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- Thank you state start -->
 
-</head>
-<body>
+		<!-- Thank you state end -->
 
-  <!-- Rating state start -->
+		<main>
+			<!-- Rating state end -->
 
-  How did we do?
+			<div class="container" id="rating-state">
+				<img src="./images/icon-star.svg" alt="Star Icon" />
 
-  Please let us know how we did with your support request. All feedback is appreciated
-  to help us improve our offering!
+				<div class="review-section">
+					<h1>How did we do?</h1>
+					<p>
+						Please let us know how we did
+						with your support request. All
+						feedback is appreciated to help
+						us improve our offering!
+					</p>
+				</div>
 
-  1 2 3 4 5
+				<div class="rating-container">
+					<button class="rank" aria-label="Rate 1" data-value="1">1</button>
+                			<button class="rank" aria-label="Rate 2" data-value="2">2</button>
+                			<button class="rank" aria-label="Rate 3" data-value="3">3</button>
+                			<button class="rank" aria-label="Rate 4" data-value="4">4</button>
+                			<button class="rank" aria-label="Rate 5" data-value="5">5</button>
+				</div>
+        		<button id="submit-button">Submit</button>
+			</div>
 
-  Submit
+			<div class="thank-you-container" id="thank-you-state" style="display: none;">
+				<img
+					src="./images/illustration-thank-you.svg"
+					alt="Thank you illustration"
+				/>
+				<p class="selection">You selected<span class="rate"> 0 </span>out of 5</p>
+				<div class="reply">
+					<h1>Thank you!</h1>
+					<p>
+						We appreciate you taking the
+						time to give a rating. If you
+						ever need more support, don’t
+						hesitate to get in touch!
+					</p>
+				</div>
+			</div>
+		</main>
 
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support,
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+		<div class="attribution">
+			Challenge by
+			<a
+				href="https://www.frontendmentor.io?ref=challenge"
+				target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Your Name Here</a>.
+		</div>
+		 <script src="main.js"></script>
+	</body>
 </html>
